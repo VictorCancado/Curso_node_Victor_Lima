@@ -8,8 +8,7 @@ class Reader {
     }
     async Read(filePath) {
         try {
-          let file = await this.reader(filePath, "utf-8");
-          return file;
+            return await this.reader(filePath, "utf-8");
         } catch (err) {
             return undefined;
         }
