@@ -1,0 +1,23 @@
+{
+  "name": "Curso_node_Victor_Lima",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Processor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorCancado/Curso_node_Victor_Lima.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorCancado/Curso_node_Victor_Lima/issues"
+  },
+  "homepage": "https://github.com/VictorCancado/Curso_node_Victor_Lima#readme",
+  "dependencies": {
+    "ejs": "^3.1.8"
+  }
+}
