@@ -1,11 +1,12 @@
-let Reader = require("./Reader");
-let Writer = require("./Writer");
-let Processor = require("./Processor");
-let Table = require("./Table");
-let HtmlParser = require("./HtmlParser");
+const Reader = require("./Reader");
+const Writer = require("./Writer");
+const Processor = require("./Processor");
+const Table = require("./Table");
+const HtmlParser = require("./HtmlParser");
+const PDFWriter = require("./PDFWriter");
 
-let leitor = new Reader();
-let escritor = new Writer();
+const leitor = new Reader();
+const escritor = new Writer();
 
 async function main() {
   let dados = await leitor.Read("./users.csv");
@@ -15,9 +16,8 @@ async function main() {
   
   var html = await HtmlParser.Parse(usuarios);
 
-  escritor.Write("meuarquivogerado.html", html);
-
-  console.log(html);
+  escritor.Write(Date.now() + ".html", html);
+  PDFWriter.WritePdf(Date.now() + ".PDF", html);
 }
 
 main();
